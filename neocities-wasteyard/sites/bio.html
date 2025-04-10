@@ -1,0 +1,155 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Orta üst kısma yerleştir */
+    background-color: #000000;
+    font-family: Arial, sans-serif; /* Varsayılan bir font kullan */
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('potos/flasbulb2.png');
+    background-size: 200px 200px;
+    animation: moveBackground 20s linear infinite;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column; /* İçeriği sütun şeklinde düzenle */
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.warp-image {
+    width: 600px; /* Asıl logonun boyutunu 800px olarak ayarladık */
+    animation: warp 2s infinite;
+    margin-bottom: 100px; /* Logolar arasında boşluk bırak */
+}
+
+.youtube-links {
+    display: flex;
+    justify-content: center; /* Logoları ortala */
+    align-items: center;
+    width: 100%; /* Container genişliğinin tamamı kadar */
+    margin-top: 30px; /* YouTube logolarını 30px kadar alta al */
+}
+
+.youtube-links a {
+    text-decoration: none; /* Link altı çizgisini kaldır */
+    transition: transform 0.3s ease-in-out;
+    margin: 20px; /* Logolar arası boşluk bırak */
+    display: block; /* A elementlerini blok element yap */
+}
+
+.youtube-links img {
+    width: 350px; /* YouTube logolarını 150px boyutuna küçülttük */
+    transition: transform 0.3s ease-in-out;
+}
+
+.youtube-links a:hover {
+    transform: translateY(-10px); /* Süzülme efekti */
+}
+
+.marquee-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: 1000; /* Diğer içeriklerin üzerinde olacak */
+}
+
+.marquee {
+    display: inline-block;
+    color: #00FF00; /* Yeşil renk */
+    font-size: 10px; /* Yazı boyutunu 2 katına çıkardık */
+    font-weight: 100; /* İnce font kalınlığı */
+    white-space: nowrap; /* Satır sonu işaretlerini kaldır */
+    animation: marquee 20s linear infinite; /* Kayan animasyon */
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(calc(100% + 2000px));
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes warp {
+    0% {
+        transform: scale(1, 1);
+    }
+    25% {
+        transform: scale(1.2, 0.8);
+    }
+    50% {
+        transform: scale(1.1, 0.9);
+    }
+    75% {
+        transform: scale(1.2, 0.8);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 600px 600px;
+    }
+}
+
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 2000;
+}
+
+.modal-content {
+    text-align: center;
+    color: white;
+}
+
+.modal-content p {
+    margin: 20px 0;
+    color: #00FF00; /* Yeşil renk */
+}
+
+.modal-content .small-text {
+    font-size: 14px;
+    color: #00FF00; /* Yeşil renk */
+}
+
+.close-modal {
+    border: none; /* Çerçeveyi kaldırdık */
+    background: none; /* Arka planı kaldırdık */
+    cursor: pointer;
+}
+
+.close-modal img {
+    width: 70px; /* Görüntüyü biraz büyüttük */
+    cursor: pointer;
+}

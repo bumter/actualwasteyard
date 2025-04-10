@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ACTUAL WASTEYARD</title>
+    <link rel="stylesheet" href="mainaltstyle.css">
+</head>
+<body>
+    <div class="marquee-container">
+        <div class="marquee">
+            Last Updated 06/10/24 - Still Getting Updated - Made By Wasteyard - Early wip
+            <link rel="icon" type="image/x-icon" href="favicon.ico"> 
+        </div>
+    </div>
+    <div class="background"></div>
+    <div class="container">
+        <img src="potos/waste1.png" alt="Waste Image" class="warp-image">
+        <div class="youtube-links">
+            <a href="https://www.youtube.com/channel/UCPnq_R1slOqvkOHLSFWAzNQ" class="interactive-element"><img src="potos/youtube.png" alt="YouTube"></a>
+            <a href="https://discord.gg/UVv8mdqsCj" class="interactive-element"><img src="potos/discord.png" alt="Discord"></a>
+            <a href="https://www.instagram.com/waste.yard/" class="interactive-element"><img src="potos/insta.png" alt="Instagram"></a>
+            <a href="https://open.spotify.com/playlist/2zBYT8O233dCy2mdGO9yep?si=5a0e77825c594d52" class="interactive-element"><img src="potos/soundclouder.png" alt="Spotify"></a>
+        </div>
+    <div class="other-links">
+      <a href="https://wasteyard.neocities.org/socials" class="interactive-element other-links-button">- OTHER LINKS -</a>
+    </div>
+        <div class="textbox-container">
+            <img src="potos/textbox.png" alt="Textbox" class="textbox-image">
+            <img src="potos/texter.png" alt="Texter" class="texter-image">
+            <img src="potos/arrow.gif" alt="Arrow" class="arrow-image">
+        </div>
+    </div>
+    <div class="grid-column left"></div>
+    <div class="grid-column extra-left"></div>
+    <div class="grid-column extra-right"></div>
+    <div class="grid-column right"></div>
+    <div class="content">
+        <h2>CHANGELOG</h2>
+        <p>finished writing the bio text</p>
+        <h2>Whats next?</h2>
+        <p>will add the doors and fix the cursor</p>
+    </div>
+    <div id="bottom"></div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <p>This website is in the really early development please SHIFT + REFRESH before entering.</p>
+            <p class="small-text">PC is Recommended</p>
+            <p>also please dont use any third-party extensions because it really breaks the website "dark-reader, soundbooster or any type of adblocker"</p>
+            <button class="close-modal interactive-element"><img src="potos/ok.png" alt="OK Button"></button>
+        </div>
+    </div>
+
+    <div id="music-control" class="music-control">
+        <img id="music-button" src="potos/open.gif" alt="Music Control Button">
+        <audio id="darkroom" loop>
+            <source src="https://files.catbox.moe/v2d0jq.mp3" type="audio/ogg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    <script src="zart.js"></script>
+
+    <script src="script.js"></script>
+    <script>
+        document.querySelector('.close-modal').addEventListener('click', function() {
+            document.getElementById('modal').style.display = 'none';
+        });
+
+        document.body.addEventListener('click', function() {
+            document.body.style.cursor = 'url("potos/click.png") 0.5 0.5, auto';
+            setTimeout(function() {
+                document.body.style.cursor = 'url("potos/idle.png") 0.5 0.5, auto';
+            }, 100);
+        });
+
+        const musicButton = document.getElementById('music-button');
+        const darkroomAudio = document.getElementById('darkroom');
+
+        document.body.addEventListener('click', function() {
+            if (darkroomAudio.paused) {
+                darkroomAudio.play();
+            }
+        }, { once: true }); 
+
+        musicButton.addEventListener('click', function() {
+            if (darkroomAudio.paused) {
+                darkroomAudio.play();
+                musicButton.src = 'potos/open.gif';
+            } else {
+                darkroomAudio.pause();
+                musicButton.src = 'potos/mute.gif';
+            }
+        });
+    <div class="pop" id="pop1"></div>
+    <div class="pop" id="pop2"></div>
+    <div class="pop" id="pop3"></div>
+    <div class="pop" id="pop4"></div>
+    <div class="pop" id="pop5"></div>
+
+    <script src="script.js"></script>
+    <script>
+        document.querySelector('.close-modal').addEventListener('click', function() {
+            document.getElementById('modal').style.display = 'none';
+        });
+
+        document.body.addEventListener('click', function() {
+            document.body.style.cursor = 'url("potos/click.png") 0.5 0.5, auto';
+            setTimeout(function() {
+                document.body.style.cursor = 'url("potos/idle.png") 0.5 0.5, auto';
+            }, 100);
+        });
+
+        const musicButton = document.getElementById('music-button');
+        const darkroomAudio = document.getElementById('darkroom');
+
+        document.body.addEventListener('click', function() {
+            if (darkroomAudio.paused) {
+                darkroomAudio.play();
+            }
+        }, { once: true });
+
+        musicButton.addEventListener('click', function() {
+            if (darkroomAudio.paused) {
+                darkroomAudio.play();
+                musicButton.src = 'potos/open.gif';
+            } else {
+                darkroomAudio.pause();
+                musicButton.src = 'potos/mute.gif';
+            }
+        });
+
+    </script>
+</body>
+</html>
