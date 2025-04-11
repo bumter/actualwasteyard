@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Not Found</title>
+    <link rel="stylesheet" href="notfoundstyle.css">
+</head>
+<body>
+    <div class="not-found-container">
+        <h1>404 Not Found</h1>
+        <p>idk what you fucking did but there is no page like that.</p>
+        <img id="random-pop" src="" alt="Random Pop">
+    </div>
+    <audio autoplay loop>
+        <source src="https://files.catbox.moe/5oh1go.ogg" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <script>
+        // Rastgele bir sayı seç
+        const randomIndex = Math.floor(Math.random() * 5) + 1;
+        // Seçilen rastgele sayıya göre resim yolunu oluştur
+        const randomImage = `pops/pop${randomIndex}.png`;
+        // Resim elementinin src'sini ayarla
+        document.getElementById('random-pop').src = randomImage;
+    </script>
+</body>
+</html>
